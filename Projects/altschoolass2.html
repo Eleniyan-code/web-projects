@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+html {
+        height: 100%;
+      }
+      body {
+        min-height: 100%;
+        background: #F5F8FA;
+        position: relative;
+        width: 1440px;
+        height: 1170px;
+
+
+        
+
+      }
+
+      .nav {
+       margin-top: 28px;
+       margin-left: 100px;
+        width: 1360px;
+        height: 73px;
+        /* border: 4px solid black; */
+        position: relative;        text-align: right;
+
+      }
+
+      img {
+        position: absolute;
+        /* margin-left: 40px; */
+      }
+
+      ul li {
+        display: inline;
+        padding: 42px;
+      }
+      #Account {
+        border: 1px solid black;
+        border-radius: 8px;
+        padding: 10px;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .emptydiv {
+        width: 1358px;
+        height: 2px;
+        top: 99px;
+        margin-left: 100px;
+        background: #E0E6EA;
+
+
+      }
+
+    .main {
+        width: 902px;
+        height: 845px;
+        position: absolute;
+        border-radius: 0px, 6px, 6px, 0px;
+        /* border: 1px solid red; */
+        top: 0px;
+        bottom: 0px;
+        left: 150px;
+        right: 0;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .checkout {
+        width: 580px;
+        height: 795px;
+        background: #FFFFFF;
+        box-shadow: 0px 5px 15px 0px #0000000D;
+        box-shadow: 0px 15px 35px 0px #2B404E18;
+        display: flex;
+        flex-direction: column;
+
+
+    }
+    .freelance {
+        width: 320px;
+        height: 795px;
+        border-radius: 0px, 6px, 6px, 0px;
+        background: #1179BF;
+
+
+    }
+    h1 {
+        width: 580px;
+        height: 80px;
+        margin-top: 41px;
+        padding-inline-start: 48px;
+        /* border: 1px solid yellowgreen; */
+
+
+    }
+    
+        #emptydiv2 {
+        width: 580px;
+        height: 2px;
+        border: 2px solid #F5F7FA;
+        margin-left: 0p;
+    }
+      
+
+    .BasicInfo {
+        width: 580px;
+        height: 221px;
+        /* border: 2px solid green; */
+        position: relative;
+        /* display: flex; */
+        /* flex-direction: row; */
+            /* flex-wrap: wrap; */
+            /* column-gap: 35px; */
+            /* row-gap: 30px; */
+
+        padding-inline-start: 55px;
+        padding-block-start: 34px;
+
+
+    }
+
+    #item1 {
+      position: absolute;
+      width: 260px;
+        height: 40px;
+    }
+
+    #item2 {
+      position: absolute;
+      width: 227px;
+      height: 60px;
+      margin-top: 51px;
+    }
+
+    #item3 {
+      position: absolute;
+      width: 227px;
+      height: 60px;
+      margin-top: 51px;
+      margin-left: 271px;
+    }
+
+    #item4 {
+      width: 427px;
+      height: 60px;
+      margin-top: 121px;
+
+
+    }
+
+    
+    #one {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        padding: 5px;
+        border: 2px solid #548BC5
+    }
+h3 {
+    
+    /* border: 2px solid #548BC5; */
+    font-family: Lato;
+font-size: 18px;
+font-weight: 700;
+line-height: 22px;
+letter-spacing: -0.1599999964237213px;
+text-align: left;
+
+}
+
+div::placeholder {
+    background: #EDEFF2;
+
+}
+
+label {
+    font-family: Lato;
+font-size: 14px;
+font-weight: 400;
+line-height: 17px;
+letter-spacing: 0px;
+text-align: left;
+
+}
+input {
+    background: #EDEFF2;
+    border-color: #EDEFF2;
+    display: inline-block;
+
+}
+
+#Paymentinfo {
+  width: 580px;
+  height: 154px;
+  /* border: 1px solid salmon; */
+  padding-inline-start: 55px;
+        padding-block-start: 34px;
+
+}
+
+#Email {
+  width: 300px;
+}
+
+#Cardnumber{
+  flex-grow: 200px;
+  border-block: transparent;
+}
+#date {
+  width: 70px;
+  text-align: right;
+  border: transparent;
+  border-block: transparent;
+}
+
+#CVV {
+  width: 70px;
+  flex-shrink: 1;
+  text-align: right;
+  border-block: transparent;
+}
+
+#BuySection {
+  width: 483px;
+  height: 166.1px;
+  /* border: 1px solid teal; */
+  margin-left: 49px;
+  margin-top: 39px;
+  position: relative;
+  
+}
+
+#BuyButton {
+  width: 483px;
+  height: 52px;
+  text-align: center;
+  padding: 15px;
+  background-color: #038E7D;
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.39600005745887756px;
+  text-align: center;
+  color: #FFFFFF;
+  border-radius: 4px;
+  
+}
+
+#support {
+  margin-top: 24px;
+  margin-left: 105px;
+  width: 333px;
+height: 20px;
+
+
+}
+#support p {
+  padding-inline-start: 25px;
+}
+
+#FooterShape {
+  margin-top: 50px;
+  margin-left: 197px;
+}
+
+footer {
+  width: 867px;
+height: 17px;
+top: 1014px;
+left: 287px;
+margin-left: 25px;
+margin-top: 33px;
+text-align: center;
+
+}
+
+#pricetag {
+  width: 231px;
+height: 152px;
+margin-top: 42px;
+margin-left: 47px;
+/* border: 1px solid white; */
+
+}
+
+#pricetag h6 {
+  font-family: Lato;
+font-size: 20px;
+font-weight: 700;
+line-height: 24px;
+letter-spacing: -0.009999999776482582px;
+text-align: left;
+color: #FFFFFF;
+}
+#pricetagp {
+  font-family: Lato;
+font-size: 60px;
+font-weight: 300;
+line-height: 72px;
+letter-spacing: -0.014999999664723873px;
+text-align: left;
+color: #FFFFFF;
+}
+sup, sub {
+font-family: Lato;
+font-size: 18px;
+font-weight: 700;
+line-height: 22px;
+/* letter-spacing: -0.014999999664723873px; */
+text-align: left;
+color: #FFFFFF;
+}
+#sub {
+/* border: 1px solid white; */
+margin-left: -20px;
+color: #FFFFFF;
+line-height: 10px;
+font-size: 20px;
+padding: 10px;
+word-spacing: 7px;
+}
+
+#pricetag p {
+  font-family: Lato;
+font-size: 16px;
+font-style: italic;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: -0.007999998517334461px;
+text-align: left;
+color: #FFFFFF;
+}
+
+#pricetag2 {
+  width: 170px;
+height: 96px;
+margin-top: 36px;
+margin-left: 46px;
+/* border: 1px solid white; */
+
+}
+
+#pricetag2 p {
+  padding-left: 25px;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.007999998517334461px;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+#pricetag3 {
+  width: 186px;
+  height: 50px;
+  /* border: 1px solid white; */
+  margin-left: 46px;
+  margin-top: 38px;
+  font-family: Lato;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: -0.007999998517334461px;
+  text-align: left;
+  color: #FFFFFF;
+  
+}
+#pricetag3 span {
+  font-family: Lato;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: -0.007999998517334461px;
+  text-align: left;
+  
+}
+#pricetag4 {
+  width: 229px;
+  height: 196px;
+  margin-top: 42px;
+  /* border: 1px solid white; */
+  margin-left: 46px;
+}
+
+#pricetag4 p {
+  width: 227px;
+  height: 96px;
+  margin-top: 43px;
+  margin-left: 2px;
+  /* border: 1px solid white; */
+  font-family: Lato;
+font-size: 18px;
+font-style: italic;
+font-weight: 700;
+line-height: 24px;
+letter-spacing: -0.008999999612569809px;
+text-align: left;
+
+font-family: Lato;
+font-size: 18px;
+font-style: italic;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: -0.008999999612569809px;
+text-align: left;
+
+font-family: Roboto;
+font-size: 18px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: -0.008999999612569809px;
+text-align: left;
+color: #FFFFFF;
+
+  
+}
+
+#pricetag4 img {
+  margin-top: -100px;
+  
+}
+
+#pricetag4p {
+    padding-left: 50px;
+    width: 200px;
+    height: 40px;
+    /* border: 1px solid wheat; */
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <section class="nav">
+        <img src="/images/wppusher-logo copy.jpg" alt="wppusher-logo">
+        <nav>
+            <ul>
+                <li><a href="">Download</a></li>
+                <li><a href="">Learn more</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">Help</a></li>
+                <li id="Account"><a href="">Account</a></li>
+            </ul>
+        </nav>
+    </section>
+    <div class="emptydiv"></div>
+    
+    <section class="main">
+        <div class="checkout">
+            <h1>Checkout</h1>
+            <div id="emptydiv2"></div>
+            <div class="BasicInfo">
+                <h3 id="item1"><span id="one">1</span> Your Basic Information </h3>
+                <div id="item2">
+                    <label for="name">First Name</label><br>
+                    <input type="text" placeholder="Jane">
+                </div>
+                <div id="item3">
+                    <label for="name">Last Name</label><br>
+                    <input type="text" placeholder="Doe">
+                </div>
+                <div id="item4">
+                  <label for="name">Email</label><br>
+                  <input type="text" placeholder="janedoe@example.com" id="Email">
+                            
+              </div>
+            </div>
+            <div id="emptydiv2"></div>
+            <div id="Paymentinfo">
+              <h3 id="item1"><span id="one">1</span> Your Payment Information </h3>
+                <div id="item2">
+                    <label for="name">Card Number</label><br>
+                    <div style="display: flex;"> <input type="text" style="flex: 1;" placeholder="Card number" id="Cardnumber"><input type="text" style="flex: 1;" placeholder="mm/dd" id="date"><input type="text" style="flex: 1;" placeholder="CVV" id="CVV"></div>
+                </div>
+            </div>
+            <div id="BuySection">
+              <div id="BuyButton"> Buy WP Pusher </div>
+              <div id="support">
+                <img src="/images/Mask.jpg" alt="Mask" class="Mask">
+                <p>Need any help? Don’t hesitate to contact support!</p>
+              </div>
+              <div id="FooterShape">
+                <img src="/images/Shape.jpg" alt="Footer Shape">
+              </div>
+
+            </div>
+        </div>
+               
+    <div class="freelance">
+      <div id="pricetag">
+        <h6>Freelancer</h6>
+        <span id="pricetagp"><sup>$</sup>99 <span id="sub">/year </span></span>
+
+      <p> Automatically renews <br>after 1 year</p>
+      </div>
+      <div id="pricetag2">
+        <img src="/images/Combined Shape.jpg" alt="Mark Tick">
+        <p>Use on 5 client sites</p>
+        <img src="/images/Combined Shape.jpg" alt="Mark Tick">
+        <p>Private repositories</p>
+        <img src="/images/Combined Shape.jpg" alt="Mark Tick">
+        <p>Email support</p>
+      </div>
+
+      <div id="pricetag3">
+        <p>Need 20 client sites?<br>
+          <span>Switch to the Agency plan.</span></p>
+      </div>
+
+      <div id="pricetag4">
+        <p>FTP is horrible to deal with. WP Pusher solves that issue, and the customer support is awesome!</p>
+        <p id="pricetag4p">Kirk Beard</p>
+        <img src="/images/Bitmap.jpg" alt="Bitmap">
+       
+      </div>
+    </div>
+
+    <footer><p>© 2018 WP Pusher IVS  ·  Terms of Service</p></footer>
+
+
+    </section>
+
+</body>
+</html>

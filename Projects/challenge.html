@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Preview Card</title>
+    <link rel="stylesheet" href="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Lato:wght@100;300;400&family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        height: 100%;
+      }
+      body {
+        min-height: 100%;
+      }
+      html body {
+        background-color: hsl(30, 38%, 92%);
+        position: relative;
+      }
+
+      .main {
+        display: flex;
+        width: 600px;
+        height: 500px;
+        border: 1px solid hsl(30, 38%, 92%);
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        border-radius: 10px;
+      }
+
+      #imageDescription {
+        width: 300px;
+        height: 500px;
+        background-color: #fff;
+        /* border-radius: 10px; */
+      }
+
+      img {
+        /* border-radius: 10px; */
+      }
+
+      p {
+        font-size: 14px;
+        padding-block-start: 10px;
+        color: hsl(228, 12%, 48%);
+        width: fit-content;
+        line-height: 25px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+      }
+      h1 {
+        font-family: "Fraunces", serif;
+        font-size: xx-large;
+        line-height: 35px;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-bottom: 40px;
+      }
+
+      #p1 {
+        letter-spacing: 5px;
+        padding-inline-start: 30px;
+        padding-block-start: 30px;
+      }
+
+      #p2 {
+        padding-inline-start: 30px;
+        padding-inline-end: 30px;
+        margin-top: -20px;
+        margin-bottom: 30px;
+      }
+
+      #span1 {
+        font-family: "Fraunces", serif;
+        padding-inline-start: 30px;
+        font-size: 40px;
+        color: hsl(158, 36%, 37%);
+        margin-left: 10px;
+      }
+
+      #span2 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        color: hsl(228, 12%, 48%);
+        text-decoration: line-through;
+      }
+
+      #p3 {
+        margin: 0 auto;
+        margin-block: 20px;
+        border: 1px solid hsl(158, 36%, 37%);
+        width: 200px;
+        text-align: center;
+        padding: 10px;
+        /* padding-inline-end: 40px; */
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        color: #fff;
+        background-color: hsl(158, 36%, 37%);
+        border-radius: 10px;
+      }
+
+      .icon {
+        margin-top: -60px;
+        margin-left: 60px;
+        position: absolute;
+      }
+
+      /*@media only screen and (max-width: 600px) {
+        .main {
+          display: flex;
+          width: 300px;
+          flex-direction: column;
+          height: 200px;
+          border: 1px solid hsl(30, 38%, 92%);
+          position: absolute;
+          right: 0;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          border-radius: 10px;
+        }
+        #imageDescription {
+          width: 400px;
+          height: 500px;
+          background-color: #fff;
+          border-radius: 10px;
+        }
+        #image {
+          border-radius: 10px;
+        }
+      }*/
+
+      @media only screen and (max-width: 600px) {
+        .main { 
+             
+            flex-direction: column;
+            margin-left: 10px;
+            /* padding: 100px; */
+            /* width: 686px; */
+                 }
+
+        img {
+          width: 400px;
+          height: 300px;
+          border-radius: 8px;
+        }
+
+        #imageDescription { 
+          width: 400px;
+          height: 1000px;
+          /* padding-inline: 40px; */
+          border-radius: 8px;
+
+        }
+
+        h1, #p2 {
+          width: 300px;
+        }
+
+
+        #p3 {
+          width: 350px;
+        }
+
+        .icon {
+          height: 40px;
+          width: 40px;
+          margin-left: 110px;
+          margin-top: -65px;
+          /* color: #fff; */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="main">
+      <div id="image">
+        <img
+          src="/images/image-product-desktop.jpg"
+          alt="image desktop Preview"
+          width="300px"
+          height="500"
+        />
+      </div>
+      <div id="imageDescription">
+        <p id="p1">PERFUME</p>
+        <h1>Gabrielle Essence Eau De Parfum</h1>
+        <p id="p2">
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+        <span id="span1">$149.99</span>
+        <span id="span2"><sup>$169.99</sup></span>
+        <p id="p3">  Add to Cart
+        </p>
+          <img
+            src="/images/icons8-shopping-cart-30.png"
+            alt="icon-cart"
+            id="image"
+            class="icon"
+          />
+         
+      </div>
+    </section>
+  </body>
+</html>
